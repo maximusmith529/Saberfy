@@ -8,8 +8,7 @@ It uses the Spotify API to format and create a playable Beat Saber music map usi
 
 ### Requirements/References
 For this code to work as intended, please install the following:
-  1. Spotify API
-  2. requests libary
-  1. spotDL (used to download the spotify file for beatsaber usage) (see https://github.com/spotDL/spotify-downloader)
+  1. requests libary
+  2. spotDL (used to download the spotify file for beatsaber usage) (see https://github.com/spotDL/spotify-downloader)
 
  
