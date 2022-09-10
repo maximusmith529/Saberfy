@@ -10,8 +10,7 @@ if __name__ == '__main__':
     for i in songTracks["artists"]:
         print(i)
 
-    cover = songTracks["album"][0]["images"]
-
+    cover = songTracks["album"]["images"][0]
 
 
 """

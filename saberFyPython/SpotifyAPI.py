@@ -95,4 +95,8 @@ class SpotifyAPI(object):
         songDetails = spotify.get_track(self.songid)
         self.artistName = songDetails["artists"][0]["name"]
 
-        # add one for images
+    # add one for images
+    def writeImage(self, _id):
+        img_data = requests.get(id).content
+        with open('cover.jpg', 'wb') as handler:
+            handler.write(img_data)
