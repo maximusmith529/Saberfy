@@ -90,4 +90,9 @@ class SpotifyAPI(object):
     def get_track(self, _id):
         return self.get_resource(_id, resource_type='tracks')
 
+    def getArtist(self):
+        spotify = SpotifyAPI("b6709a08f53d40b6ab740ff646c017a6", "110e1f30d2f3463a8b56a06a528fbcb7")
+        songDetails = spotify.get_track(self.songid)
+        self.artistName = songDetails["artists"][0]["name"]
+
     # add one for images
