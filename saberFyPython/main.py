@@ -9,8 +9,6 @@ if __name__ == '__main__':
     songTracks = spotify.get_track("4lv9Fj6md6hbu6eavN8EKa?si=a2d8bf3e51544820")
     for i in songTracks["artists"]:
         print(i)
-
-
 """
 song_json = json.dumps(songTracks, indent=4)
 with open("songdetail.json", "w") as outfile:
