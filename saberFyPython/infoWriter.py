@@ -41,7 +41,7 @@ class infoWriter():
             '_levelAuthorName': "saberFy Automated Map",
             '_beatsPerMinute': self.BPM,
             '_shuffle': 0,
-            '_shufflePeriod': 0,
+            '_shufflePeriod': 0.5,
             '_previewStartTime': self.songLength / 2,
             '_previewDuration': 7,
             '_songFilename': "song.ogg",

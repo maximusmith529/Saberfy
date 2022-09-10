@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e2178fd-7898-494e-a02c-df0a1af8d00d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/saberFyPython/.spotdl-cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/saberFyPython/beatMapNotes.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/saberFyPython/node.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/saberFyPython/songDetails.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/songdetail.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Saberfy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Saberfy.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saberFyPython/infoWriter.py" beforeDir="false" afterPath="$PROJECT_DIR$/saberFyPython/infoWriter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/saberFyPython/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/saberFyPython/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,14 +41,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/rocke/Saberfy&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/rocke/Saberfy/venv/Scripts"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rocke\Saberfy\venv\Scripts" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\rocke\Saberfy\venv\Lib\site-packages\spotdl\download" />
     </key>
