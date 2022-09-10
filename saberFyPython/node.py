@@ -30,18 +30,24 @@ def writeDiff(songID):
         tempString = "{\"_time\": "+str(x.time)+",\"_lineIndex\": "+str(x.lineIndex)+",\"_lineLayer\": "+str(x.lineLayer)+",\"_type\": "+str(x.type)+",\"_cutDirection\": "+str(x.cutDirection)+"},"
         fullString = fullString + str(tempString);
     fullString = str(fullString.rstrip(fullString[-1]))
-
     
-    diff = json.dumps({
-        {
-        "_version": "2.6.0",
-        "_notes": [fullString],
-        "_sliders": [], 
-        "_obstacles": [],
-        "_events": [],
-        "_waypoints": []
-        }
-    })
-    with open("temp/Normal.dat", "w") as outfile:
-        outfile.write(diff)
+    diffString = "{\"_version\": \"2.6.0\",\"_notes\":["+fullString+"],\"_sliders\": [],\"_obstacles\": [],\"_events\": [],\"_waypoints\": []}"
+    
+    diffJson = json.loads(diffString)
+
+    with open("Normal.dat", "w") as outfile:
+        outfile.write(diffString)
+    
+    # diff = json.dumps(
+    #     {
+    #     "_version": "2.6.0",
+    #     "_notes": [fullString.repalce("\","")],
+    #     "_sliders": [], 
+    #     "_obstacles": [],
+    #     "_events": [],
+    #     "_waypoints": []
+    #     }
+    # )
+    # with open("Normal.dat", "w") as outfile:
+    #     outfile.write(diff)
 
