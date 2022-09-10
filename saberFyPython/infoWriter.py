@@ -10,8 +10,9 @@ class infoWriter():
     offset = None
     songLength = None
 
-    def __init__(self, songid):
+    def __init__(self, songid, offset):
         self.songid = songid
+        self.offset = offset
 
     def getInfo(self):
         spotify = SpotifyAPI("b6709a08f53d40b6ab740ff646c017a6", "110e1f30d2f3463a8b56a06a528fbcb7")
@@ -23,6 +24,7 @@ class infoWriter():
         self.BPM = round(songAnalysis["track"]["tempo"])
 
     def writeInfo(self):
+        self.getInfo()
         info = json.dumps({
             '_version': '2.6.0',
             '_songName': self.songName,
@@ -47,8 +49,8 @@ class infoWriter():
                 '_noteJumpStartBeatOffset': 0
             }]
         })
-        print(info)
-
+        with open("Info.dat", "w") as outfile:
+            outfile.write(info)
 
 """
 {
