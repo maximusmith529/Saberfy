@@ -1,0 +1,44 @@
+Current objective is translate per beat into saberNode
+Make 1 node per beat, all nodes should be down facing just to test
+
+Sections
+    Notes: What you hit
+    Obstacles: What you dont want to hit (avoid) we also arent including
+    Events: How the colors change, doesnt matter
+
+
+Note Format:
+{
+    "_time": 6,
+    "_lineIndex": 1,
+    "_lineLayer": 0,
+    "_type": 0,
+    "_cutDirection": 1
+}
+
+    variables:
+        time: time in game when this note occurs
+        lineIndex: An integer number, from 0 to 3, which represents the column 
+        where this note is located. far left is 0, far right is 3 (0 1 2 3)
+        lineLayer: the layer this note is located from 0-2. 0 is bottom 2 is top
+        type: This indicates the type of note there is. 
+        Currently, there are 4 known types, but 1 remains unused:
+        _type	Result
+        0	Left (Red) Note
+        1	Right (Blue) Note
+        2	Unused
+        3	Bomb
+
+        _cutDirection: This indicates the cut direction for the note.
+        _cutDirection	Result
+        0	Up
+        1	Down
+        2	Left
+        3	Right
+        4	Up Left
+        5	Up Right
+        6	Down Left
+        7	Down Right
+        8	Any (Dot Note)
+
+
