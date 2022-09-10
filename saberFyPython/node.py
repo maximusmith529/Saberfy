@@ -35,7 +35,7 @@ def writeDiff(songID):
     
     diffJson = json.loads(diffString)
 
-    with open("Normal.dat", "w") as outfile:
+    with open("temp/Normal.dat", "w") as outfile:
         outfile.write(diffString)
     
     # diff = json.dumps(
