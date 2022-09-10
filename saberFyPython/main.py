@@ -10,6 +10,9 @@ if __name__ == '__main__':
     for i in songTracks["artists"]:
         print(i)
 
+    cover = songTracks["album"][0]["images"]
+
+
 
 """
 song_json = json.dumps(songTracks, indent=4)
