@@ -50,11 +50,14 @@ class infoWriter():
             '_allDirectionsEnvironmentName': "GlassDesertEnvironment",
             '_songTimeOffset': self.offset,
             '_difficultyBeatmapSets': [{
-                '_difficulty': "Normal",
-                '_difficultyRank': 3,
-                '_beatmapFilename': "Normal.dat",
-                '_noteJumpMovementSpeed': 13,
-                '_noteJumpStartBeatOffset': 0
+                '_beatmapCharacteristicName': "Standard",
+                '_difficultyBeatmaps': [{
+                    '_difficulty': "Normal",
+                    '_difficultyRank': 3,
+                    '_beatmapFilename': "Normal.dat",
+                    '_noteJumpMovementSpeed': 13,
+                    '_noteJumpStartBeatOffset': 0
+                }]
             }]
         })
         with open("temp/Info.dat", "w") as outfile:

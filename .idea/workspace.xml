@@ -5,18 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e2178fd-7898-494e-a02c-df0a1af8d00d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saberFyPython/.spotdl-cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saberFyPython/beatMapNotes.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saberFyPython/node.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saberFyPython/songDetails.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/songdetail.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Saberfy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Saberfy.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/saberFyPython/infoWriter.py" beforeDir="false" afterPath="$PROJECT_DIR$/saberFyPython/infoWriter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saberFyPython/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/saberFyPython/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saberFyPython/node.py" beforeDir="false" afterPath="$PROJECT_DIR$/saberFyPython/node.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saberFyPython/temp/.spotdl-cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saberFyPython/temp/Info.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saberFyPython/temp/Normal.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saberFyPython/temp/cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saberFyPython/temp/song.ogg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

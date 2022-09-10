@@ -20,9 +20,9 @@ def writeDiff(songID):
     nodeList = [];
     counter = 0;
     for x in tatumList:
-        nodeTemp = node( counter,1,0,0,1)
+        nodeTemp = node(counter, 1, 0, 0, 0)
         nodeList.append(nodeTemp)
-        nodeTemp = node( counter,1,0,1,1)
+        nodeTemp = node(counter, 2, 0, 1, 0)
         nodeList.append(nodeTemp)
         counter = counter + 1
     fullString = ""
