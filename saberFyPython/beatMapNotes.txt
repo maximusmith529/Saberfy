@@ -1,4 +1,5 @@
 Current objective is translate per beat into saberNode
+Make 1 node per beat, all nodes should be down facing just to test
 
 Sections
     Notes: What you hit
