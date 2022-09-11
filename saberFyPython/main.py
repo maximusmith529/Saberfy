@@ -27,7 +27,7 @@ if __name__ == '__main__':
     directory = pathlib.Path("temp/")
 
 
-    os.system("spotdl https://open.spotify.com/track/"+uri+" --output-format ogg --output temp/ --path-template song.{ext}")
+    os.system("spotdl " + input + " --output-format ogg --output temp/ --path-template song.{ext}")
 
     with zipfile.ZipFile("song.zip", mode="w") as archive:
         for file_path in directory.iterdir():
