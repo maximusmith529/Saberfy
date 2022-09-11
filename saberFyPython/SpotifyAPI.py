@@ -95,4 +95,4 @@ class SpotifyAPI(object):
         songDetails = spotify.get_track(self.songid)
         self.artistName = songDetails["artists"][0]["name"]
 
-    # add one for images
+

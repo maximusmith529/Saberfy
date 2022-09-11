@@ -124,25 +124,24 @@ def writeNorm(songID):
                 tuple([1, 1]): tuple([3, 8]), tuple([2, 1]): tuple([2, 8]),
                 tuple([1, 0]): tuple([1, 3, 8]), tuple([2, 0]): tuple([1, 2, 8])}
 
-    tatumHalf = tatumList[:len(tatumList) // 2]
+    count = 0;
+    for x in tatumList:
+        if count % 2 == 0:
+            xax = random.randint(0, 1)
+            yax = random.randint(0, 2)
 
+            possibleLDir = posToDir.get(tuple([xax, yax]))
+            ind = random.randint(0, len(possibleLDir) - 1)
+            # left one
+            nodeTemp = node(x["start"] * (tempo / 60), xax, yax, 0, possibleLDir[ind])
+            nodeList.append(nodeTemp)
 
-
-    for x in tatumHalf:
-        xax = random.randint(0, 1)
-        yax = random.randint(0, 2)
-
-        possibleLDir = posToDir.get(tuple([xax, yax]))
-        ind = random.randint(0, len(possibleLDir) - 1)
-        # left one
-        nodeTemp = node(x["start"]*(tempo/30), xax, yax, 0, possibleLDir[ind])
-        nodeList.append(nodeTemp)
-
-        xax = 3-xax
-        possibleRDir = posToDir.get(tuple([xax, yax]))
-        # right one
-        nodeTemp = node(x["start"]*(tempo/30), xax, yax, 1, possibleRDir[ind])
-        nodeList.append(nodeTemp)
+            xax = 3 - xax
+            possibleRDir = posToDir.get(tuple([xax, yax]))
+            # right one
+            nodeTemp = node(x["start"] * (tempo / 60), xax, yax, 1, possibleRDir[ind])
+            nodeList.append(nodeTemp)
+        count = count + 1
 
     fullString = ""
     for x in nodeList:
