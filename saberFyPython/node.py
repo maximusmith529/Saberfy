@@ -3,6 +3,7 @@ import random
 from SpotifyAPI import SpotifyAPI
 import json
 
+
 class node:
     def __init__(self, time, lineIndex, lineLayer, type, cutDirection):
         self.time = time
@@ -35,15 +36,14 @@ def writeDiff(songID):
         possibleLDir = posToDir.get(tuple([xax, yax]))
         ind = random.randint(0, len(possibleLDir) - 1)
         # left one
-        nodeTemp = node(x["start"]*(tempo/30), xax, yax, 0, possibleLDir[ind])
+        nodeTemp = node(x["start"] * (tempo / 30), xax, yax, 0, possibleLDir[ind])
         nodeList.append(nodeTemp)
 
-        xax = 3-xax
+        xax = 3 - xax
         possibleRDir = posToDir.get(tuple([xax, yax]))
         # right one
-        nodeTemp = node(x["start"]*(tempo/30), xax, yax, 1, possibleRDir[ind])
+        nodeTemp = node(x["start"] * (tempo / 30), xax, yax, 1, possibleRDir[ind])
         nodeList.append(nodeTemp)
-
 
     fullString = ""
     for x in nodeList:
@@ -58,6 +58,7 @@ def writeDiff(songID):
 
     with open("temp/Normal.dat", "w") as outfile:
         outfile.write(diffString)
+
 
 def writeHard(songID):
     spotify = SpotifyAPI("b6709a08f53d40b6ab740ff646c017a6", "110e1f30d2f3463a8b56a06a528fbcb7")
@@ -82,15 +83,14 @@ def writeHard(songID):
         possibleLDir = posToDir.get(tuple([xax, yax]))
         ind = random.randint(0, len(possibleLDir) - 1)
         # left one
-        nodeTemp = node(x["start"]*(tempo/60), xax, yax, 0, possibleLDir[ind])
+        nodeTemp = node(x["start"] * (tempo / 60), xax, yax, 0, possibleLDir[ind])
         nodeList.append(nodeTemp)
 
-        xax = 3-xax
+        xax = 3 - xax
         possibleRDir = posToDir.get(tuple([xax, yax]))
         # right one
-        nodeTemp = node(x["start"]*(tempo/60), xax, yax, 1, possibleRDir[ind])
+        nodeTemp = node(x["start"] * (tempo / 60), xax, yax, 1, possibleRDir[ind])
         nodeList.append(nodeTemp)
-
 
     fullString = ""
     for x in nodeList:
@@ -124,25 +124,26 @@ def writeNorm(songID):
                 tuple([1, 1]): tuple([3, 8]), tuple([2, 1]): tuple([2, 8]),
                 tuple([1, 0]): tuple([1, 3, 8]), tuple([2, 0]): tuple([1, 2, 8])}
 
-    tatumHalf = tatumList[:len(tatumList) // 2]
 
 
+    count = 0;
+    for x in tatumList:
+        if count % 2 == 0:
+            xax = random.randint(0, 1)
+            yax = random.randint(0, 2)
 
-    for x in tatumHalf:
-        xax = random.randint(0, 1)
-        yax = random.randint(0, 2)
+            possibleLDir = posToDir.get(tuple([xax, yax]))
+            ind = random.randint(0, len(possibleLDir) - 1)
+            # left one
+            nodeTemp = node(x["start"] * (tempo / 60), xax, yax, 0, possibleLDir[ind])
+            nodeList.append(nodeTemp)
 
-        possibleLDir = posToDir.get(tuple([xax, yax]))
-        ind = random.randint(0, len(possibleLDir) - 1)
-        # left one
-        nodeTemp = node(x["start"]*(tempo/30), xax, yax, 0, possibleLDir[ind])
-        nodeList.append(nodeTemp)
-
-        xax = 3-xax
-        possibleRDir = posToDir.get(tuple([xax, yax]))
-        # right one
-        nodeTemp = node(x["start"]*(tempo/30), xax, yax, 1, possibleRDir[ind])
-        nodeList.append(nodeTemp)
+            xax = 3 - xax
+            possibleRDir = posToDir.get(tuple([xax, yax]))
+            # right one
+            nodeTemp = node(x["start"] * (tempo / 60), xax, yax, 1, possibleRDir[ind])
+            nodeList.append(nodeTemp)
+        count = count + 1
 
     fullString = ""
     for x in nodeList:
@@ -157,5 +158,3 @@ def writeNorm(songID):
 
     with open("temp/Normal.dat", "w") as outfile:
         outfile.write(diffString)
-
-
