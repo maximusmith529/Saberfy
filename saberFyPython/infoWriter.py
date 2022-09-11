@@ -51,13 +51,21 @@ class infoWriter():
             '_songTimeOffset': self.offset,
             '_difficultyBeatmapSets': [{
                 '_beatmapCharacteristicName': "Standard",
-                '_difficultyBeatmaps': [{
-                    '_difficulty': "Normal",
-                    '_difficultyRank': 3,
-                    '_beatmapFilename': "Normal.dat",
-                    '_noteJumpMovementSpeed': 13,
-                    '_noteJumpStartBeatOffset': 0
-                }]
+                '_difficultyBeatmaps': [
+                    {
+                        '_difficulty': "Normal",
+                        '_difficultyRank': 3,
+                        '_beatmapFilename': "Normal.dat",
+                        '_noteJumpMovementSpeed': 13,
+                        '_noteJumpStartBeatOffset': 0
+                    },
+                    {
+                        '_difficulty': "Hard",
+                        '_difficultyRank': 6,
+                        '_beatmapFilename': "Hard.dat",
+                        '_noteJumpMovementSpeed': 18,
+                        '_noteJumpStartBeatOffset': 0
+                    }]
             }]
         })
         with open("temp/Info.dat", "w") as outfile:
