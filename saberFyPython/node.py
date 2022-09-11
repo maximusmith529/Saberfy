@@ -36,13 +36,13 @@ def writeDiff(songID):
         possibleLDir = posToDir.get(tuple([xax, yax]))
         ind = random.randint(0, len(possibleLDir) - 1)
         # left one
-        nodeTemp = node(counter, xax, yax, 0, possibleLDir[ind])
+        nodeTemp = node(x["start"], xax, yax, 0, possibleLDir[ind])
         nodeList.append(nodeTemp)
 
         xax = 3-xax
         possibleRDir = posToDir.get(tuple([xax, yax]))
         # right one
-        nodeTemp = node(counter, xax, yax, 1, possibleRDir[ind])
+        nodeTemp = node(x["start"], xax, yax, 1, possibleRDir[ind])
         nodeList.append(nodeTemp)
         counter = counter + 1
 
