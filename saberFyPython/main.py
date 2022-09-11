@@ -1,9 +1,7 @@
 from SpotifyAPI import SpotifyAPI
-import json
-import spotdl
 import os
 from infoWriter import infoWriter
-from node import writeDiff
+import node
 import pathlib
 import zipfile
 
@@ -20,7 +18,8 @@ if __name__ == '__main__':
 
 
     songDetails = spotify.get_analysis(uri)
-    writeDiff(uri)
+    node.writeNorm(uri)
+    node.writeHard(uri)
     iw = infoWriter(uri, 1.202)
     iw.write()
 
