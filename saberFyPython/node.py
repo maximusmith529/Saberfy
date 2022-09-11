@@ -16,6 +16,7 @@ class node:
 def writeDiff(songID):
     spotify = SpotifyAPI("b6709a08f53d40b6ab740ff646c017a6", "110e1f30d2f3463a8b56a06a528fbcb7")
     songDetails = spotify.get_analysis(songID)
+    tempo = round(songDetails["track"]["tempo"])
     tatumList = []
     for x in songDetails["tatums"]:
         tatumList.append(x)
@@ -28,7 +29,6 @@ def writeDiff(songID):
                 tuple([1, 2]): tuple([0, 3, 8]), tuple([2, 2]): tuple([0, 2, 8]),
                 tuple([1, 1]): tuple([3, 8]), tuple([2, 1]): tuple([2, 8]),
                 tuple([1, 0]): tuple([1, 3, 8]), tuple([2, 0]): tuple([1, 2, 8])}
-    counter = 0;
     for x in tatumList:
         xax = random.randint(0, 1)
         yax = random.randint(0, 2)
@@ -36,15 +36,15 @@ def writeDiff(songID):
         possibleLDir = posToDir.get(tuple([xax, yax]))
         ind = random.randint(0, len(possibleLDir) - 1)
         # left one
-        nodeTemp = node(counter, xax, yax, 0, possibleLDir[ind])
+        nodeTemp = node(x["start"]*(tempo/30), xax, yax, 0, possibleLDir[ind])
         nodeList.append(nodeTemp)
 
         xax = 3-xax
         possibleRDir = posToDir.get(tuple([xax, yax]))
         # right one
-        nodeTemp = node(counter, xax, yax, 1, possibleRDir[ind])
+        nodeTemp = node(x["start"]*(tempo/30), xax, yax, 1, possibleRDir[ind])
         nodeList.append(nodeTemp)
-        counter = counter + 1
+
 
     fullString = ""
     for x in nodeList:
